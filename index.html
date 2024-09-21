@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="player">
+            <div class="search-box">
+                <i class='bx bxs-music'></i>
+                <input id="song" type="text" placeholder="Search Song" autocomplete="off">
+                <button id="search" class='bx bx-search'></button>
+            </div>
+
+            <div class="song-wrapper">
+                <div class="song-details">
+                    <div id="song-image">
+                        <img src="" alt="song-image" width="200px" height="200px">
+                    </div>
+                    <p class="song-name">Millionaire</p>
+                    <p class="singer-name">Yo Yo Honey Singh</p>
+                </div>
+
+                <audio class="song-control">
+                    <source id="song-link" src="" type="audio/mp4">
+                    Your browser does not support the audio element.
+                </audio>
+
+                <div class="seek-bar">
+                    <input type="range" id="progress" value="0" step="1" min="0">
+                </div>
+
+                <div class="song-length">
+                    <p id="song-current-time">0:00</p>
+                    <p id="song-end-time">2:13</p>
+                </div>
+
+                <div class="controls">
+                    <div class="other-btn volume">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </div>
+                    <div class="play-pause">
+                        <i class="fa-solid fa-backward-step" id="previous"></i>
+                        <i id="playpause" class="fa-solid fa-pause"></i>
+                        <i class="fa-solid fa-forward-step" id="next"></i>
+                    </div>
+                    <div class="other-btn like">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+
+                <div class="alert">
+                    <p class="alert-message"></p>
+                    <p class="search-again"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
